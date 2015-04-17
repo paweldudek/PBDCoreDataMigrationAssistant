@@ -1,10 +1,12 @@
-# PBDCoreDataMigrationAssistant
+# The Problem
 
 You probably remember all those headaches you had because of the nasty crashes your app has had when you when Core Data migration failed as you changed your model without creating a new version. 
 
 Or perhaps you have code that handles that the 'default' way - by removing the store completely. It's also not the perfect solution - users loose their data. Best scenario - they have to redownload it. Worst - their data is lost forever. 
 
-Enter `PBDCoreDataMigrationAssistant`. This small framework aims at simplifying working with Core Data versioning by ensuring that your app always has access to previous `NSManagedObjectModel` version. 
+# The Solution
+
+Enter `PBDCoreDataMigrationAssistant`. This small framework aims at simplifying working with Core Data versioning by ensuring that your app always has access to previous `NSManagedObjectModel` version and automatically performing migration on your behalf (if possible, see below). 
 
 # Usage
 
