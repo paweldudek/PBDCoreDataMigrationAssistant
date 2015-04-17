@@ -24,7 +24,7 @@
     NSMappingModel *mappingModel = [NSMappingModel inferredMappingModelForSourceModel:self.sourceModel
                                                                      destinationModel:self.destinationModel
                                                                                 error:&inferringError];
-    if (error) {
+    if (inferringError) {
         [[self delegate] migrationAssistant:self didFailToInferMappingModelWithError:inferringError];
         mappingModel = [[self delegate] mappingModelForMigrationAssistant:self];
     }
