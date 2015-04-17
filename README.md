@@ -37,15 +37,15 @@ self.modelController = [[PBDManagedObjectModelController alloc] initWithManagedO
 Then, when you're setting up your stack you should check whether a saved model already exists and whether it differs from what you currently have in your apps bundle. If so you should attempt to perform a migration:
 
 ```
-    NSManagedObjectModel *unarchivedModel = [[self modelController] unarchivedManagedObjectModel];
+NSManagedObjectModel *unarchivedModel = [[self modelController] unarchivedManagedObjectModel];
 
-    if (unarchivedModel && ![unarchivedModel isEqual:model]) {
-        PBDCoreDataMigrationAssistant *migrationAssistant = [[PBDCoreDataMigrationAssistant alloc] initWithStoreURL:self.storeURL
+if (unarchivedModel && ![unarchivedModel isEqual:model]) {
+    PBDCoreDataMigrationAssistant *migrationAssistant = [[PBDCoreDataMigrationAssistant alloc] initWithStoreURL:self.storeURL
                                                                                                         sourceModel:unarchivedModel
                                                                                                    destinationModel:model];
-        [migrationAssistant migrateStoreWithError:nil];
-    }
-    [self.modelController archiveManagedObjectModel:model];
+    [migrationAssistant migrateStoreWithError:nil];
+}
+[self.modelController archiveManagedObjectModel:model];
 ```
 
 ## PBDManagedObjectModelController
