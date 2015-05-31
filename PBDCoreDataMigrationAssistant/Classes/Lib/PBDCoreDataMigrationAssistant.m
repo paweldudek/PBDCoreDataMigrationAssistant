@@ -51,7 +51,9 @@
 
     [self.fileManager removeItemAtURL:temporaryFileURL error:nil];
 
-    *error = migrationError;
+    if (error) {
+        *error = migrationError;
+    }
 
     return migrationSuccessful;
 }
