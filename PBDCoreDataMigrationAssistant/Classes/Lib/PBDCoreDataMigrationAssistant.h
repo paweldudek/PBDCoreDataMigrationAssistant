@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class PBDCoreDataMigrationAssistant;
 
 @protocol PBDMigrationAssistantDelegate <NSObject>
@@ -22,10 +24,12 @@
 
 @property(nonatomic, readonly) NSURL *storeURL;
 
-@property(nonatomic, weak) id <PBDMigrationAssistantDelegate> delegate;
+@property(nonatomic, weak, nullable) id <PBDMigrationAssistantDelegate> delegate;
 
 - (instancetype)initWithStoreURL:(NSURL *)storeURL sourceModel:(NSManagedObjectModel *)sourceModel destinationModel:(NSManagedObjectModel *)destinationModel;
 
 - (BOOL)migrateStoreWithError:(NSError **)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

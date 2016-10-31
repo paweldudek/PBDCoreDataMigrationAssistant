@@ -4,6 +4,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface PBDManagedObjectModelController : NSObject
 
 @property(nonatomic, readonly) NSURL *managedObjectModelURL;
@@ -14,6 +16,8 @@
 
 - (void)archiveManagedObjectModel:(NSManagedObjectModel *)model;
 
-- (NSManagedObjectModel *)unarchivedManagedObjectModel;
+- (nullable NSManagedObjectModel *)unarchivedManagedObjectModel;
 
 @end
+
+NS_ASSUME_NONNULL_END
