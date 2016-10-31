@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 Dudek. All rights reserved.
+ * Copyright (c) 2015 Pawel Dudek. All rights reserved.
  */
 #import "NSBundle+PBDBundleVersionString.h"
 

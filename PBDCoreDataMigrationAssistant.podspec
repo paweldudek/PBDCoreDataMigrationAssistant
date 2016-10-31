@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PBDCoreDataMigrationAssistant"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Helpers classes to ease core data migration."
   s.homepage     = "https://github.com/paweldudek/PBDCoreDataMigrationAssistant"
   s.license      = {:type => 'MIT', :file=>'LICENSE'}
@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'PBDCoreDataMigrationAssistant/Classes/Lib/**/*.{h,m}'
+  s.framework    = 'CoreData'
 end

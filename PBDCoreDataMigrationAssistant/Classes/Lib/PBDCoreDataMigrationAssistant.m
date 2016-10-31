@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015 ManyGuide B.V. All rights reserved.
+ * Copyright (c) 2015 Pawel Dudek. All rights reserved.
  */
 #import <CoreData/CoreData.h>
 #import "PBDCoreDataMigrationAssistant.h"
