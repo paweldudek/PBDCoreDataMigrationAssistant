@@ -2,8 +2,8 @@
  * Copyright (c) 2015 ManyGuide B.V. All rights reserved.
  */
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@class NSManagedObjectModel;
 @class PBDCoreDataMigrationAssistant;
 
 @protocol PBDMigrationAssistantDelegate <NSObject>

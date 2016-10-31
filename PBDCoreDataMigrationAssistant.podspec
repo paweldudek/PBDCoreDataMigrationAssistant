@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'PBDCoreDataMigrationAssistant/Classes/Lib/**/*.{h,m}'
+  s.framework    = 'CoreData' 
 end
